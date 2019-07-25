@@ -22,6 +22,22 @@ public class CountStringTest {
     @Test
     public void givenInputStringShouldReturnFrequency(){
 
+
         assertEquals("CountString{data={one=5, two=2, three=2}}", countString.checkingFrequency("one one -one___two,,three,one @three*one?two"));
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void givenNullInputShouldGiveException(){
+        countString.checkingFrequency(null);
+    }
+
+    @Test
+    public void givenInputStringMustCheckForNotEquality(){
+        assertNotEquals(" ",countString.checkingFrequency("Hello world,Welcome to programming@910"));
+    }
+
+    @Test
+    public void givenInputStringShouldReturnNotNullValue(){
+        assertNotNull(countString.checkingFrequency("hello world"));
     }
 }
