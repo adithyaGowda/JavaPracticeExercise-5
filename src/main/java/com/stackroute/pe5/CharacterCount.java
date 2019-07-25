@@ -5,10 +5,16 @@ import java.util.Map;
 
 public class CharacterCount {
 
-    public Map<String, Boolean> characterCount(String[] input) {
+    Map<String, Boolean> result = new HashMap<>();
 
-        Map<String, Boolean> result = new HashMap<>();
+    @Override
+    public String toString() {
+        return "CharacterCount{" +
+                "output=" + result +
+                '}';
+    }
 
+    public String characterCount(String[] input) {
 
             for (String data : input) {
 
@@ -16,7 +22,8 @@ public class CharacterCount {
                     result.put(data, true);
                 else
                     result.put(data, false);
+
             }
-            return result;
+            return toString();
     }
 }
