@@ -1,8 +1,5 @@
 package com.stackroute.pe5;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 
 public class Student {
 
@@ -10,6 +7,16 @@ public class Student {
 
     private int id;
     private String name;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     private int age;
 
     public int getId() {

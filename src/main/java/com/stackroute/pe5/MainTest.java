@@ -40,6 +40,6 @@ public class MainTest {
 
         Collections.sort(list, studentSorter);
 
-        System.out.println(list);
+        System.out.println(list.toString());
     }
 }
